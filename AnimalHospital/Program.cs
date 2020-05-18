@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Collections.Generic;
 namespace AnimalHospital
 {
     class Program
@@ -12,6 +12,7 @@ namespace AnimalHospital
 
             Console.WriteLine("Goodbye!");
         }
+
 
         static bool MainMenu()
         {
@@ -32,15 +33,28 @@ namespace AnimalHospital
             }
             else if (k == '2')
             {
-                Console.WriteLine("Not yet implemented!");
+                
+
+
             }
             else if (k == '3')
             {
-                Console.WriteLine("Not yet implemented!");
+                for (int i = 0; i < hospital.patients.Count; i++)
+                {
+                    Console.Clear();
+                    Console.WriteLine(hospital.patients[i].name + " " + hospital.patients[i].age + " " + hospital.patients[i].doctor);
+
+                }
+
             }
             else if (k == '4')
             {
-                Console.WriteLine("Not yet implemented!");
+                for (int i = 0; i < hospital.doctors.Count; i++)
+                {
+                    Console.Clear();
+                    Console.WriteLine(hospital.doctors[i].name + " " + hospital.doctors[i].speciality);
+
+                }
             }
             else if (k == '5')
             {
@@ -72,13 +86,23 @@ namespace AnimalHospital
 
             new Patient(name, age).AdmitTo(hospital);
         }
+        static void Discharge()
+        {
+            string name;
+            name = Console.ReadLine();
 
+            
+
+
+
+
+        }
         static Hospital InitializeHospital()
         {
             Hospital hospital = new Hospital("Animal Hospital");
-
+            
             hospital.doctors.AddRange(new Doctor[]
-            {
+            {   
                 new Doctor("Matt Tennant", "Spinal Injury"),
                 new Doctor("David Smith", "Knee Injury"),
                 new Doctor("Jodie Tyler", "Oncology"),
