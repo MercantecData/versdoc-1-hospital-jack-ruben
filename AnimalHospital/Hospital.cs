@@ -18,10 +18,11 @@ namespace AnimalHospital
 
         public void AdmitPatient(Patient patient)
         {
-            if(patients.Contains(patient))
+            if (patients.Contains(patient))
             {
                 Console.WriteLine("Patient already admitted to {0}.", name);
-            } else
+            }
+            else
             {
                 patients.Add(patient);
                 Console.WriteLine("{0} was admitted to {1} successfully", patient.name, name);
@@ -30,10 +31,11 @@ namespace AnimalHospital
 
         public void DischargePatient(Patient patient)
         {
-            if(!patients.Contains(patient))
+            if (!patients.Contains(patient))
             {
                 Console.WriteLine("Patient not in this hospital");
-            } else
+            }
+            else
             {
                 patients.Remove(patient);
             }
@@ -41,9 +43,9 @@ namespace AnimalHospital
 
         public Patient FindPatientByName(string name)
         {
-            foreach(var p in patients)
+            foreach (var p in patients)
             {
-                if(p.name == name)
+                if (p.name == name)
                 {
                     return p;
                 }
