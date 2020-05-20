@@ -20,5 +20,12 @@ namespace AnimalHospital
         {
             hospital.AdmitPatient(this);
         }
+        public void dischargeTo(Hospital hospital)
+        {
+            hospital.DischargePatient(this);
+            // calling DischargePatient function with parameter from console
+
+
+        }
     }
 }

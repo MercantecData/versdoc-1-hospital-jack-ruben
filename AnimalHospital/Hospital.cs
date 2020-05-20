@@ -30,6 +30,7 @@ namespace AnimalHospital
         }
 
         public void DischargePatient(Patient patient)
+            // Discharge patient
         {
             if (!patients.Contains(patient))
             {
@@ -38,6 +39,7 @@ namespace AnimalHospital
             else
             {
                 patients.Remove(patient);
+                // discharge patient from list
             }
         }
 

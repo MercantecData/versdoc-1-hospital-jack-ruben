@@ -33,15 +33,18 @@ namespace AnimalHospital
             }
             else if (k == '2')
             {
-                
 
+                Discharge();
+                // call the discharge function to discharge patient
 
             }
             else if (k == '3')
             {
+                Console.Clear();
                 for (int i = 0; i < hospital.patients.Count; i++)
+                    // check every element in the patients list and print it out
                 {
-                    Console.Clear();
+                    
                     Console.WriteLine(hospital.patients[i].name + " " + hospital.patients[i].age + " " + hospital.patients[i].doctor);
 
                 }
@@ -49,9 +52,11 @@ namespace AnimalHospital
             }
             else if (k == '4')
             {
+                Console.Clear();
                 for (int i = 0; i < hospital.doctors.Count; i++)
+                    // check every element in the doctors list and print it out 
                 {
-                    Console.Clear();
+                    
                     Console.WriteLine(hospital.doctors[i].name + " " + hospital.doctors[i].speciality);
 
                 }
@@ -90,9 +95,9 @@ namespace AnimalHospital
         {
             string name;
             name = Console.ReadLine();
-
+            new Patient(name, 0).dischargeTo(hospital);
             
-
+            // get patient's name send name parameter to patient list for found out specific patient 
 
 
 
